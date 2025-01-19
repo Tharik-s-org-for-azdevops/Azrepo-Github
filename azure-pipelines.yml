@@ -21,12 +21,9 @@ steps:
     version: '8.x'
 
 
-- task: MSBuild@1
+- task: DotNetCoreCLI@2
   inputs:
-    solution: '**/*.sln'
+    command: 'build'
 
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+
